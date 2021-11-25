@@ -1,18 +1,19 @@
 :root {
-    --main-color: #838199;
+    --main-color: hsla(0, 0%, 100%, 0.6);
+    --main-font-family:'Inter', sans-serif;
+    --scandry-font-family:'Lexend Deca', sans-serif;
 }
 
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
 }
 
 body {
-    background-color: #0a0c1b;
+    background-color: hsl(233, 47%, 7%);
 }
 
 .container {
@@ -53,7 +54,7 @@ body {
     top: 50%;
     width: 75%;
     height: 600px;
-    background-color: #1c1938;
+    background-color: hsl(244, 38%, 16%);
     border-radius: 10px;
 }
 
@@ -66,18 +67,13 @@ body {
 @media (max-width: 767px) {
     .card {
         width: 85%;
-        height: 85vh;
-        background-color: #1c1938;
+        height: 90vh;
+        background-color: hsl(244, 38%, 16%);
         border-radius: 10px;
     }
 }
 
-@media (max-width:991px){
-    .card{
-        width: 95%;
 
-    }
-}
 /* ==================================================== */
 
 .card .header {
@@ -88,7 +84,7 @@ body {
     left: 50%;
     width: 38.3vw;
     height: 100%;
-    filter: opacity(40%);
+    filter: opacity(50%);
     z-index: 1;
 }
 
@@ -98,7 +94,7 @@ body {
     top: 50%;
     transform: translate(-7px, -50%);
     left: 50%;
-    background-color: #3d075a;
+    background-color:hsl(281, 87%, 22%) ;
     width: 51%;
     height: 100%;
     border-radius: 0 10px 10px 0;
@@ -126,30 +122,7 @@ body {
     }
 }
 
-@media (max-width:991px){
-    .card .header{
-        width: 50%;
-        position: absolute;
-        transform: translate(-7px, -50%);
-        top: 50%;
-        left: 50%;
-        width: 51%;
-        height: 100%;
-        filter: opacity(40%);
-        z-index: 1;
-    }
-    .image::after {
-        content: "";
-        position: absolute;
-        top: 50%;
-        transform: translate(-7px, -50%);
-        left: 50%;
-        background-color: #3d075a;
-        width: 51%;
-        height: 100%;
-        border-radius: 0 10px 10px 0;
-    }
-}
+
 
 /* ================================================= */
 
@@ -167,21 +140,24 @@ body {
 
 .Definition h1 {
     font-size: 45px;
+    font-family: var(--main-font-family);
 }
 
 .Definition h1 span {
-    color: #a85dd4;
+    color: hsl(277, 64%, 61%);
 }
 
 .Definition p {
-    width: 90%;
+    width: 450px;
+    font-size: 18px;
     margin-left: -5px;
-    font-size: 19.5px;
     line-height: 1.5;
     color: var(--main-color);
+    font-family: var(--scandry-font-family);
+    font-weight: 400;
 }
 
-@media (max-width: 767px) {
+@media (max-width:767px) {
     .Definition .intro-text {
         font-size: 17px;
         width: 220px;
@@ -200,7 +176,7 @@ body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, 0%);
-        width: 250px;
+        width: 270px;
         font-size: 15px;
         line-height: 1.5;
         color: var(--main-color);
@@ -209,33 +185,7 @@ body {
     }
 }
 
-@media (max-width:991px){
-    .Definition .intro-text {
-        font-size: 17px;
-        
-    }
-    .Definition .intro-text h1 {
-        font-size: 30px;
-        width: 330px;
 
-        position: absolute;
-        top: 25%;
-        left: 0;
-        transform: translate(15%, -100%);
-    }
-    .Definition .intro-text p {
-        position: absolute;
-        top: 35%;
-        left: 50%;
-        transform: translate(-94%, 0%);
-        width: 350px;
-        font-size: 15px;
-        line-height: 1.5;
-        color: var(--main-color);
-        margin-left: -35px;
-        margin-bottom: -17px;
-    }
-}
 /* ============================================= */
 
 .stats {
@@ -252,6 +202,7 @@ body {
 
 .stats h1 {
     font-size: 30px;
+    font-family: var(--main-font-family);
 }
 
 .stats p {
@@ -260,9 +211,10 @@ body {
     text-transform: uppercase;
     margin-top: -10px;
     font-weight: 600;
+    font-family: var(--scandry-font-family);
 }
 
-@media (max-width: 767px) {
+@media (max-width:767px) {
     .stats {
         width: 60%;
         color: white;
@@ -289,33 +241,5 @@ body {
     }
     .stats .three{
         margin-left:20px ;
-    }
-}
-@media (max-width:991px){
-    .stats {
-        width: 20%;
-        position: absolute;
-        top: 60%;
-        padding-top: 10px;
-        color: white;
-    }
-    
-    .stats .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        justify-items: flex-start;
-    }
-    
-    .stats h1 {
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    .stats p {
-        font-size: 14px;
-        color: var(--main-color);
-        text-transform: uppercase;
-        margin-top:-10px;
-        font-weight: 600;
     }
 }
