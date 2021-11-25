@@ -1,0 +1,321 @@
+:root {
+    --main-color: #838199;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #0a0c1b;
+}
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* mobile */
+
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.card {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    width: 75%;
+    height: 600px;
+    background-color: #1c1938;
+    border-radius: 10px;
+}
+
+.card .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .card {
+        width: 85%;
+        height: 85vh;
+        background-color: #1c1938;
+        border-radius: 10px;
+    }
+}
+
+@media (max-width:991px){
+    .card{
+        width: 95%;
+
+    }
+}
+/* ==================================================== */
+
+.card .header {
+    border-radius: 0 10px 10px 0;
+    position: absolute;
+    transform: translate(-7px, -50%);
+    top: 50%;
+    left: 50%;
+    width: 38.3vw;
+    height: 100%;
+    filter: opacity(40%);
+    z-index: 1;
+}
+
+.image::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translate(-7px, -50%);
+    left: 50%;
+    background-color: #3d075a;
+    width: 51%;
+    height: 100%;
+    border-radius: 0 10px 10px 0;
+}
+
+@media (max-width:767px) {
+    .card .header {
+        border-radius: 10px 10px 0 0;
+        position: absolute;
+        transform: translate(-50%, -100%);
+        top: 30%;
+        left: 50%;
+        width: 100%;
+        height: 30%;
+        filter: opacity(40%);
+    }
+    .image::after {
+        border-radius: 10px 10px 0 0;
+        position: absolute;
+        transform: translate(-50%, -100%);
+        top: 30%;
+        left: 50%;
+        width: 100%;
+        height: 30%;
+    }
+}
+
+@media (max-width:991px){
+    .card .header{
+        width: 50%;
+        position: absolute;
+        transform: translate(-7px, -50%);
+        top: 50%;
+        left: 50%;
+        width: 51%;
+        height: 100%;
+        filter: opacity(40%);
+        z-index: 1;
+    }
+    .image::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translate(-7px, -50%);
+        left: 50%;
+        background-color: #3d075a;
+        width: 51%;
+        height: 100%;
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+/* ================================================= */
+
+.Definition {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    color: white;
+}
+
+.Definition .container {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    margin-left: 45px;
+}
+
+.Definition h1 {
+    font-size: 45px;
+}
+
+.Definition h1 span {
+    color: #a85dd4;
+}
+
+.Definition p {
+    width: 90%;
+    margin-left: -5px;
+    font-size: 19.5px;
+    line-height: 1.5;
+    color: var(--main-color);
+}
+
+@media (max-width: 767px) {
+    .Definition .intro-text {
+        font-size: 17px;
+        width: 220px;
+    }
+    .Definition .intro-text h1 {
+        font-size: 30px;
+        text-align: center;
+        width: 280px;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -100%);
+    }
+    .Definition .intro-text p {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        width: 250px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: var(--main-color);
+        text-align: center;
+        margin-bottom: -17px;
+    }
+}
+
+@media (max-width:991px){
+    .Definition .intro-text {
+        font-size: 17px;
+        
+    }
+    .Definition .intro-text h1 {
+        font-size: 30px;
+        width: 330px;
+
+        position: absolute;
+        top: 25%;
+        left: 0;
+        transform: translate(15%, -100%);
+    }
+    .Definition .intro-text p {
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-94%, 0%);
+        width: 350px;
+        font-size: 15px;
+        line-height: 1.5;
+        color: var(--main-color);
+        margin-left: -35px;
+        margin-bottom: -17px;
+    }
+}
+/* ============================================= */
+
+.stats {
+    width: 50%;
+    padding-top: 10px;
+    color: white;
+}
+
+.stats .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    justify-items: flex-end;
+}
+
+.stats h1 {
+    font-size: 30px;
+}
+
+.stats p {
+    font-size: 14px;
+    color: var(--main-color);
+    text-transform: uppercase;
+    margin-top: -10px;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .stats {
+        width: 60%;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-70%, 45%);
+        margin: auto;
+        margin-top: -20px;
+    }
+    .stats h1 {
+        text-align: center;
+        font-size: 22px;
+    }
+    .stats p {
+        font-size: 12px;
+        color: var(--main-color);
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        font-weight: 600;
+    }
+    .stats .three{
+        margin-left:20px ;
+    }
+}
+@media (max-width:991px){
+    .stats {
+        width: 20%;
+        position: absolute;
+        top: 60%;
+        padding-top: 10px;
+        color: white;
+    }
+    
+    .stats .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        justify-items: flex-start;
+    }
+    
+    .stats h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .stats p {
+        font-size: 14px;
+        color: var(--main-color);
+        text-transform: uppercase;
+        margin-top:-10px;
+        font-weight: 600;
+    }
+}
